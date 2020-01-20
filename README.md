@@ -9,7 +9,7 @@ There are five files associated to this project:
 * Saving_Variables.py: Reads all images and performs an image filter with a 3x3 kernel to perform sharpening.
 * Model.py: Building of the Convolutional Neural Network architecture and implementation of Data Augmentation. This model close to a day to run in a regular machine, so it is highly recommend to use a powerful machine or a cloud computing system, such as [vast.ai](https://vast.ai/)
 * Model.hdf5: HDF5 file of the final model. Can be directly loaded and used, without the need to run the model training.
-* equal_variables_color_sharp: Variables saved from Saving_Variables.py which are used to feed the model at Model.py (1GB)
+* equal_variables_color_sharp.zip: Variables saved from Saving_Variables.py which are used to feed the model at Model.py (1GB)
 
 The specific architecture of the model was obtained after a vast trial including trial and error, grid search, and bayesian optimization. Adding more layers or increasing the number of parameters would make the model excessively slow to compute, and the combination of Batch Normalization, Dropouts, and Pooling Layers was the best found for the present architecture.
 
