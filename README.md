@@ -3,13 +3,12 @@ Detection of Breast Cancer in histopathological exams with Deep Learning in Pyth
 
 This project is the basis of my Master's Dissertation at the Federal University of Paraiba. A first preliminary model has been made with open source medical data available [here](https://www.kaggle.com/paultimothymooney/breast-histopathology-images). The next models will implement patient data directly from the Federal Universities of Parana and Paraiba (Brazil). The model is a Convolutional Neural Network built on Keras, with Data Augmentation and Image Preprocessing done using OpenCV.
 
-There are five files associated to this project:
+There are four files associated to this project:
 
 * Plot_Image.py: Joins all the image patches into a single image, which is the basis for the manual histopathological diagnosis.
 * Saving_Variables.py: Reads all images and performs an image filter with a 3x3 kernel to perform sharpening.
 * Model.py: Building of the Convolutional Neural Network architecture and implementation of Data Augmentation. This model close to a day to run in a regular machine, so it is highly recommend to use a powerful machine or a cloud computing system, such as [vast.ai](https://vast.ai/)
 * Model.hdf5: HDF5 file of the final model. Can be directly loaded and used, without the need to run the model training.
-* equal_variables_color_sharp.zip: Variables saved from Saving_Variables.py which are used to feed the model at Model.py (1GB)
 
 The specific architecture of the model was obtained after a vast trial including trial and error, grid search, and bayesian optimization. Adding more layers or increasing the number of parameters would make the model excessively slow to compute, and the combination of Batch Normalization, Dropouts, and Pooling Layers was the best found for the present architecture.
 
